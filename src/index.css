@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-raleway text-gray-800 antialiased;
+  }
+  
+  h1 {
+    @apply font-quicksand font-bold text-4xl md:text-5xl lg:text-6xl leading-tight;
+  }
+  
+  h2 {
+    @apply font-quicksand font-bold text-3xl md:text-4xl leading-relaxed;
+  }
+  
+  h3 {
+    @apply font-quicksand font-bold text-2xl leading-relaxed;
+  }
+  
+  h4 {
+    @apply font-quicksand font-bold text-xl leading-relaxed;
+  }
+  
+  p {
+    @apply leading-relaxed text-gray-600;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 font-medium rounded-full transition-all duration-500 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary-600 text-white hover:bg-gradient-to-r hover:from-primary-600 hover:to-secondary-600 focus:ring-primary-500 transition-all duration-500 ease-in-out bg-[size:200%] bg-left hover:bg-right;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-white text-primary-600 border border-primary-600 hover:bg-primary-50 focus:ring-primary-500;
+  }
+  
+  .container-custom {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section {
+    @apply py-16 md:py-24 relative;
+  }
+  
+  .section-title {
+    @apply font-quicksand text-3xl md:text-4xl font-bold mb-6 text-center;
+  }
+  
+  .section-subtitle {
+    @apply font-raleway text-xl text-gray-600 mb-12 text-center max-w-3xl mx-auto;
+  }
+  
+  .section-divider {
+    @apply w-full h-1 bg-gradient-to-r from-primary-100 via-primary-300 to-secondary-200;
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
